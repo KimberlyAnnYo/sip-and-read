@@ -22,6 +22,8 @@ a {
     min-height: 300px;
     margin-left: auto;
     margin-right: auto;
+    flex-wrap: flex;
+    align-items: center;
 
 }
 /* search box */
