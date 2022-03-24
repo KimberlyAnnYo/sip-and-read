@@ -8,12 +8,11 @@ let books = {
   }, 
   displayBooks: function(data) {
       const {name} = data;
-      const {icon, description} = data.weather[0];
-      const {temp, humidity} = data.main;
-      const { speed } = data.wind;
+      const { search } = data.books[0];
+    
       
-      document.querySelector(".tbox") .innerText = "Weather in" + name;
-      
+      document.querySelector(".tbox") .innerText = "books" + name;
+      document.querySelector(".search").innerText= search;
       
   },
   search: function() {
