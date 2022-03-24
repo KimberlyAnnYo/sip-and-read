@@ -1,22 +1,35 @@
-// create variables and grab by id
-var books = document.getElementById("books");
-var beer = document.getElementById("beer");
- 
-//API URL for google books.
-let apiUrl = "https://www.googleapis.com/books/v1/volumes?q=search+terms";
-
-// API Key for google books
-let APIkey = "AIzaSyAKZodEhFbkVKGFt3yykb7Sxeem5UZ0Ni0";
-
-// make request to url
-fetch(apiUrl).then(function (response) {
-  // request was successful
-  if (response.ok) {
-    response.json().then(function (data) {
-      displadyBooks(data);
-    });
+let books = {
+  "apiKey": "AIzaSyAKZodEhFbkVKGFt3yykb7Sxeem5UZ0Ni0",
+  fetchBooks: function() {
+      fetch("https://www.googleapis.com/books/v1/volumes?q=search+terms&key=AIzaSyAKZodEhFbkVKGFt3yykb7Sxeem5UZ0Ni0" 
+      )
+      .then((response) => response.json())
+      .then((data) => this.displayBooks(data));
+  }, 
+  displayBooks: function(data) {
+      const {name} = data;
+      const {icon, description} = data.weather[0];
+      const {temp, humidity} = data.main;
+      const { speed } = data.wind;
+      
+      document.querySelector(".tbox") .innerText = "Weather in" + name;
+      
+      
+  },
+  search: function() {
+      this.fetchBooks(document.querySelector(".search-bar").value);
   }
-});
+};
+document
+.querySelector(".search button")
+.addEventListener("click", function () {
+books.search();
+} );
 
-$("#books").submit(searchSubmitHandler);
-$("#beer").on("click", function (event) {});
+document.querySelector(".search").addEventListener("keyup", function(event) {
+if (event.key === "Enter") {
+  books.search();
+}
+})
+
+books.fetchBooks("");
