@@ -1,0 +1,223 @@
+/* linear gradient background color */
+html {
+    background-image: linear-gradient(#f09d31, #9e5604);
+}
+/* body */
+body {
+   
+   background-position: top center; 
+   background-repeat: no-repeat;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(255, 250, 250);
+    font-size: 1.125rem;
+
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+/* overall body container */
+.container {
+    width: 1024px;
+    min-height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+/* search box */
+
+  
+  .search {
+    margin: 20px;
+  }
+  
+  .search > h3 {
+    font-weight: normal;
+  }
+  
+  .search > h1,
+  .search > h3 {
+    color: white;
+    margin-bottom: 15px;
+    text-shadow: 0 1px #e6b856;
+  }
+  
+  .search > div {
+    display: inline-block;
+    position: relative;
+    filter: drop-shadow(0 1px #e6b856);
+  }
+  
+  .search > div:after {
+    content: "";
+    background: white;
+    width: 4px;
+    height: 20px;
+    position: absolute;
+    top: 40px;
+    right: 2px;
+    transform: rotate(135deg);
+  }
+  
+  .search > div > input {
+    color: white;
+    font-size: 16px;
+    background: transparent;
+    width: 25px;
+    height: 25px;
+    padding: 10px;
+    border: solid 3px white;
+    outline: none;
+    border-radius: 35px;
+    transition: width 0.5s;
+  }
+  
+  .search > div > input::placeholder {
+    color: #efefef;
+    opacity: 0;
+    transition: opacity 150ms ease-out;
+  }
+  
+  .search > div > input:focus::placeholder {
+    opacity: 1;
+  }
+  
+  .search > div > input:focus,
+  .search > div > input:not(:placeholder-shown) {
+    width: 250px;
+  }
+/* header  */ 
+header {
+    min-height:100px;
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 60px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgb(134, 128, 128);
+}
+
+main {
+    
+    min-height:300px;
+    display: flex;
+    align-items: center;
+
+}
+.main2 {
+    min-height: 300px;
+    padding-top: 50px;
+
+}
+/* cards */
+.cards {
+        
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+
+}
+.card1 {
+    background-image: url(#);
+    background-size: cover;
+    background-position: bottom;
+    min-height: 250px;
+    width: 30%;  
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.418);
+
+
+}
+.card2 {
+   background-image: url(#);
+   background-size: cover;
+   background-position: bottom;
+    min-height: 250px;
+    width: 30%;  
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.418);
+
+}
+.card3{
+    background-image: url(#);
+    background-size: cover;
+    background-position: bottom;
+    min-height: 250px;
+    width: 30%;  
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.418);
+
+}
+.card1, .card2, .card3 {
+padding: 30px 30px 20px 30px;
+box-sizing: border-box;
+
+}
+.herobox1 {
+    flex: 2;
+    padding-right: 100px;
+    color: black;
+    
+}
+.herobox2 {
+    flex: 1;
+    
+}
+h1 {
+    font-size: 3.25rem;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 1rem;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.418);
+}
+h2  {   
+    font-size: 2rem;
+    font-family: 'Playfair Display', serif;
+    margin-top: 20px;
+    
+
+}
+p   {
+    line-height:1.75rem ;
+    margin-bottom: 0.5rem;
+}
+.cards p {
+    font-size: 0.85rem;
+    line-height: 1.2rem;
+    margin-top: 10px;
+}
+.cards i {
+    font-size: 100px;
+    padding-top: 30px;
+}
+
+ 
+/* testimonials */
+.testimonials {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   margin-bottom: 100px;
+    
+}
+.tbox {
+    width: 47%;
+    padding: 50px;
+    border: 1px solid white;
+    box-sizing: border-box;
+    margin-top: 50px;
+    
+   
+}
+/* .tbox :last-child {
+    font-size: 0.8rem; */
+.tbox p:last-of-type {
+font-size: 0.8rem;
+padding-left: 30px;
+
+}
+@media screen and (min-width: 600px)  {
+  
+}
+
+
+
+
+  
