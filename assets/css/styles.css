@@ -215,8 +215,47 @@ font-size: 0.8rem;
 padding-left: 30px;
 
 }
-@media screen and (min-width: 600px)  {
+
+@media screen and (max-width: 980px) {
+    .testimonials {
+        flex-direction: column;
+        display: inline-block;
+        flex-wrap: wrap;
+    }
+    #search-results {
+        flex-direction: column;
+    display:inline-block;
+
+    }
   
+  
+  /* MEDIA QUERY FOR TABLETS AND SMALLER */
+  @media screen and (max-width: 768px) {
+    
+.testimonials {
+    flex-direction: column;
+    display: inline-block;
+    flex-wrap: wrap;
+}
+    #search-results {
+        flex-direction: column;
+    display:inline-block;
+  
+    }
+}
+  /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+  @media screen and (max-width: 575px) {
+   
+    .testimonials {
+        flex-direction: column;
+        display: inline-block;
+        flex-wrap: wrap;
+    }
+    #search-results {
+        flex-direction: column;
+    display:inline-block;
+
+    }
 }
 
 
