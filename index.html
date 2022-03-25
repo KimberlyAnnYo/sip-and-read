@@ -11,55 +11,44 @@
     <script src="https://kit.fontawesome.com/54e1f4c1b6.js" crossorigin="anonymous"></script>
      <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body>
+<body class="bg-slate-400">
   <header>
-  <div class="container">
+  <div class="container flex flex-col items-center text-green-700 text-xl mb-3 mt-16 mr-40 h-64">
       <!--   search bar -->
       <div class="flexbox">
-        <div class="search" id="books">
-          <h1>Search for books</h1>
+        <div class="search h-full" id="books">
+          <h1 class="text-5xl">Search for books</h1>
           <h3>Click on search icon, then type your keyword.</h3>
           <div>
             <input type="text" placeholder="Search . . ." required>
           </div>
         </div>
       </div>
-
-      <div class="container">
-        
-        <!--   search bar -->
-        <div class="flexbox">
-          <div class="search" id="beer">
-            <h1>Pair your favorite beer</h1>
-            <h3>Click on search icon, then type your keyword.</h3>
-            <div>
-              <input type="text" placeholder="Search . . ." required>
-            </div>
-          </div>
-        </div>
-      
-      </header>
+    </header>
 
       
       <main>
         <!--tesitmonials or possible book recommendations -->
-              <div class="testimonials" id="search-results">
-                  <div class="tbox" id="search-results">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium quaerat sit, a possimus commodi rem!</p>
+              <div class="testimonials p-2 flex grid lg:grid-cols-2 gap-10 m-24" id="search-results">
+                  <div class="tbox flex-1 border-black border-2 p-8" id="search-results">
+                    <img src="./assets/images/film.jpg" alt="">  
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium quaerat sit, a possimus commodi rem!</p>
                       <p> Lorem, ipsum. </p>
                   </div>
-                  <div class="tbox" id="search-results">
-                      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores esse optio veritatis quam corporis expedita. </p>
+                  <div class="tbox flex-1 border-black border-2 p-8" id="search-results">
+                    <img src="./assets/images/film.jpg" alt="">   
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores esse optio veritatis quam corporis expedita. </p>
                       <p> Lorem, ipsum. </p>
                   </div>
-                  <div class="tbox" id="search-results">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quam facilis sunt illum dolore dicta!
-                      </p>
-                      <p> Lorem, ipsum. </p>
+                  <div class="tbox flex-1 border-black border-2 p-8" id="search-results">
+                    <img src="./assets/images/film.jpg" alt="">   
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quam facilis sunt illum dolore dicta!</p>
+                    <p> Lorem, ipsum. </p>
                   </div>
-                  <div class="tbox" id="search-results">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat quo velit accusamus, earum consequuntur eum.</p>
-                      <p> Lorem, ipsum. </p>
+                  <div class="tbox flex-1 border-black border-2 p-8" id="search-results">
+                    <img src="./assets/images/film.jpg" alt="">   
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat quo velit accusamus, earum consequuntur eum.</p>
+                    <p> Lorem, ipsum. </p>
                   </div>
         
               </div>
