@@ -9,62 +9,47 @@
          
        <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body>
+<body class="bg-slate-400">
   <header>
-  <div class="container">
+  <div class="container flex flex-col items-center text-green-700 text-xl mt-16 mr-40 h-64">
       <!--   search bar -->
       <div class="flexbox">
-        <div class="search" id="books">
-          <h1>Search for books</h1>
+        <div class="search h-full" id="books">
+          <h1 class="text-5xl">Search for books</h1>
           <h3>Click on search icon, then type your keyword.</h3>
           <div>
             <input type="text" placeholder="Search . . ." required>
           </div>
         </div>
       </div>
-
-      <div class="container">
-        
-        <!--   search bar -->
-        <div class="flexbox">
-          <div class="search" id="beer">
-            <h1>Pair your favorite beer</h1>
-            <h3>Click on search icon, then type your keyword.</h3>
-            <div>
-              <input type="text" placeholder="Search . . ." required>
-            </div>
-          </div>
-        </div>
-      
-      </header>
+    </header>
 
       
-      <main>
-        <!--tesitmonials or possible book recommendations -->
-              <div class="testimonials" id="search-results">
-                  <div class="tbox" id="search-results">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium quaerat sit, a possimus commodi rem!</p>
-                      <p> Lorem, ipsum. </p>
-                  </div>
-                  <div class="tbox" id="search-results">
-                      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores esse optio veritatis quam corporis expedita. </p>
-                      <p> Lorem, ipsum. </p>
-                  </div>
-                  <div class="tbox" id="search-results">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quam facilis sunt illum dolore dicta!
-                      </p>
-                      <p> Lorem, ipsum. </p>
-                  </div>
-                  <div class="tbox" id="search-results">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat quo velit accusamus, earum consequuntur eum.</p>
-                      <p> Lorem, ipsum. </p>
-                  </div>
-        
+      <main class="flex flex-wrap content-center">
+          <div class="p-2 flex grid lg:grid-cols-2 gap-10 m-24">  
+              <!--Card 1-->
+              <div class="max-w-sm rounded overflow-hidden shadow-lg">
+                <img class="w-full" src="./assets/images/film.jpg" alt="Mountain">
+                <div class="px-6 py-4">
+                  <div class="font-bold text-xl mb-2">Book</div>
+                  <p class="text-gray-700 text-base">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, Nonea! Maiores et perferendis eaque, exercitationem praesentium nihil.
+                  </p>
+                </div>
+                
               </div>
-        
-        
-          </div>
-
+               <!--Card 1-->
+               <div class="max-w-sm rounded overflow-hidden shadow-lg">
+                <img class="w-full" src="./assets/images/film.jpg" alt="Mountain">
+                <div class="px-6 py-4">
+                  <div class="font-bold text-xl mb-2">Wine</div>
+                  <p class="text-gray-700 text-base">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, Nonea! Maiores et perferendis eaque, exercitationem praesentium nihil.
+                  </p>
+                </div>
+                
+              </div>
+            </div>
       </main> 
 <script src="./assets/js/script.js"></script>
       <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
