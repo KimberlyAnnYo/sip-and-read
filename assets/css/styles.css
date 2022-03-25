@@ -68,10 +68,14 @@ header {
   min-height:100px;
   display: flex;
   padding-top: 20px;
-  padding-bottom: 20px;
   padding-left: 60px;
   justify-content: space-between;
   align-items: center;
   margin-left: 150px;
   
+}
+
+main {
+  margin-left: 14%;
+  margin-top: -9%;
 }
