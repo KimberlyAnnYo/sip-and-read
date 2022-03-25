@@ -1,59 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Books and Beer</title>
-       <script src="https://cdn.tailwindcss.com"></script>
-         
-       <link rel="stylesheet" href="assets/css/styles.css">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body class="bg-slate-400">
-  <header>
-  <div class="container flex flex-col items-center text-green-700 text-xl mt-16 mr-40 h-64">
-      <!--   search bar -->
-      <div class="flexbox">
-        <div class="search h-full" id="books">
-          <h1 class="text-5xl">Search for books</h1>
-          <h3>Click on search icon, then type your keyword.</h3>
-          <div>
-            <input type="text" placeholder="Search . . ." required>
-          </div>
+<body class="bg-slate-400"> 
+<!-- Inputs the search bar -->
+<header>
+  <div class="search">
+    <div class="container flex flex-col items-center text-green-700 text-xl mt-16 mr-40 h-64"  >
+      <div class="container">
+        <h1>Books</h1>
+        <h2>Find the Book You Want to Read Next</h2>
+        <div class="inputform">
+          <input
+            type="text"
+            id="search-input"
+            name="search-input"
+            placeholder=" Search for books here"
+          /><input
+            type="submit"
+            id="submit-button"
+            name="submit-button"
+            value="Search"
+          />
         </div>
+    </div>
+  </div>
+</header>
+<main class="flex flex-wrap content-center">
+  <div class="p-2 flex grid lg:grid-cols-2 gap-10 m-24">  
+      <!--Card 1-->
+      <div class="max-w-sm rounded overflow-hidden shadow-lg">
+        <img class="w-full" src="./assets/images/film.jpg" alt="Mountain">
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2">Book</div>
+          <p class="text-gray-700 text-base">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, Nonea! Maiores et perferendis eaque, exercitationem praesentium nihil.
+          </p>
+        </div>
+        
       </div>
-    </header>
+       <!--Card 1-->
+       <div class="max-w-sm rounded overflow-hidden shadow-lg">
+        <img class="w-full" src="./assets/images/film.jpg" alt="Mountain">
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2">Wine</div>
+          <p class="text-gray-700 text-base">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, Nonea! Maiores et perferendis eaque, exercitationem praesentium nihil.
+          </p>
+        </div>
+        
+      </div>
+    </div>
+</main> 
 
-      
-      <main class="flex flex-wrap content-center">
-          <div class="p-2 flex grid lg:grid-cols-2 gap-10 m-24">  
-              <!--Card 1-->
-              <div class="max-w-sm rounded overflow-hidden shadow-lg">
-                <img class="w-full" src="./assets/images/film.jpg" alt="Mountain">
-                <div class="px-6 py-4">
-                  <div class="font-bold text-xl mb-2">Book</div>
-                  <p class="text-gray-700 text-base">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, Nonea! Maiores et perferendis eaque, exercitationem praesentium nihil.
-                  </p>
-                </div>
-                
-              </div>
-               <!--Card 1-->
-               <div class="max-w-sm rounded overflow-hidden shadow-lg">
-                <img class="w-full" src="./assets/images/film.jpg" alt="Mountain">
-                <div class="px-6 py-4">
-                  <div class="font-bold text-xl mb-2">Wine</div>
-                  <p class="text-gray-700 text-base">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, Nonea! Maiores et perferendis eaque, exercitationem praesentium nihil.
-                  </p>
-                </div>
-                
-              </div>
-            </div>
-      </main> 
-<script src="./assets/js/script.js"></script>
-      <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.3/dayjs.min.js"></script>
+  <!-- Display the search results -->
+  <h2 class="text"></h2>
+  <div id="output"></div>
+</div>
+
+
+
+
+  
+
+
+<script src="assets/js/script.js"></script>
 </body>
-
 </html>
