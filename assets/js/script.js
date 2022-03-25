@@ -1,5 +1,3 @@
-
-
 // Event listeners for the search button
 document.querySelector('#submit-button').addEventListener('click', searchBook);
 
@@ -40,4 +38,3 @@ document.querySelector("#search-input").addEventListener("keyup", function(event
         document.querySelector("#submit-button").click();
     }
 });
->>>>>>> c34affa53df5f7564f4b7fba9ced42e4f96dced9
