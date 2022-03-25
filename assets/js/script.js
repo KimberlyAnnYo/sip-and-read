@@ -1,34 +1,43 @@
-let books = {
-  "apiKey": "AIzaSyAKZodEhFbkVKGFt3yykb7Sxeem5UZ0Ni0",
-  fetchBooks: function() {
-      fetch("https://www.googleapis.com/books/v1/volumes?q=search+terms&key=AIzaSyAKZodEhFbkVKGFt3yykb7Sxeem5UZ0Ni0" 
-      )
-      .then((response) => response.json())
-      .then((data) => this.displayBooks(data));
-  }, 
-  displayBooks: function(data) {
-      const {name} = data;
-      const { search } = data.books[0];
-    
-      
-      document.querySelector(".tbox") .innerText = "books" + name;
-      document.querySelector(".search").innerText= search;
-      
-  },
-  search: function() {
-      this.fetchBooks(document.querySelector(".search-bar").value);
-  }
-};
-document
-.querySelector(".search button")
-.addEventListener("click", function () {
-books.search();
-} );
 
-document.querySelector(".search").addEventListener("keyup", function(event) {
-if (event.key === "Enter") {
-  books.search();
-}
-})
 
-books.fetchBooks("");
+// Event listeners for the search button
+document.querySelector('#submit-button').addEventListener('click', searchBook);
+
+// When user inputs the search bar and clicked search button, start searching
+function searchBook(event) {
+	let query = document.querySelector('#search-input').value;
+	// Initiate the fetch API
+	fetch(`https://www.googleapis.com/books/v1/volumes?q=${query}`)
+      .then((res) => res.json())
+      .then((data) => {
+      	// Filter the search results by author, title, and subtitle
+      	let output = '';
+      	data.items.forEach(book => {
+      		output += `
+          <div class="results-box">
+      		<ul>
+            <img src= ${book.volumeInfo.imageLinks.smallThumbnail}>
+	      		<li><b>Title:</b> ${book.volumeInfo.title}</li>
+	      		<li><b>Author:</b> ${book.volumeInfo.authors}</li>
+            <a href=${book.volumeInfo.canonicalVolumeLink}><button class="book-info"><b>See this book</b></button></a>
+      		</ul>
+          </div>
+      		`;
+      	});
+      	// Display the search result
+    		document.querySelector("#output").innerHTML = output;
+      })
+      // Throw an error message when something went wrong during the search
+      .catch((error) => console.log(error));
+
+      // Display "Search results of" text when clicked the search button
+	  document.querySelector('.text').innerHTML = `Search results of: "${query}"`
+	}
+
+// Start searching the lists when user clicks entry key
+document.querySelector("#search-input").addEventListener("keyup", function(event) {
+    if (event.keyCode === 13) {
+        document.querySelector("#submit-button").click();
+    }
+});
+>>>>>>> c34affa53df5f7564f4b7fba9ced42e4f96dced9
