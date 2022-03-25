@@ -13,7 +13,7 @@ fetch(apiUrl).then(function (response) {
   // request was successful
   if (response.ok) {
     response.json().then(function (data) {
-      displadyBooks(data);
+      displayBooks(data);
     });
   }
 });
