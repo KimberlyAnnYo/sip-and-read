@@ -1,37 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books and Beer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto:wght@300&display=swap"
+    rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/54e1f4c1b6.js" crossorigin="anonymous"></script>
+     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body class="bg-slate-400"> 
-<!-- Inputs the search bar -->
-<header>
-  <div class="search">
-    <div class="container flex flex-col items-center text-green-700 text-xl mt-16 mr-40 h-64"  >
-      <div class="container">
-        <h1>Books</h1>
-        <h2>Find the Book You Want to Read Next</h2>
-        <div class="inputform">
-          <input
-            type="text"
-            id="search-input"
-            name="search-input"
-            placeholder=" Search for books here"
-          /><input
-            type="submit"
-            id="submit-button"
-            name="submit-button"
-            value="Search"
-          />
-        </div>
+<body class="bg-slate-400">
+  <header>
+    <div class="search">
+      <div class="container flex flex-col items-center text-green-700 text-xl mt-16 mr-40 h-64"  >
+        <div class="container">
+          <h1>Books</h1>
+          <h2>Find the Book You Want to Read Next</h2>
+          <div class="inputform">
+            <input
+              type="text"
+              id="search-input"
+              name="search-input"
+              placeholder=" Search for books here"
+            /><input
+              type="submit"
+              id="submit-button"
+              name="submit-button"
+              value="Search"
+            />
+          </div>
+      </div>
     </div>
-  </div>
-</header>
+  </header>
 <main class="flex flex-wrap grid-cols-2 gap-10 ml-32 place-items-center">
   <!--Card 1-->
   <div class="flex flex-wrap">
@@ -70,4 +72,5 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 </body>
+
 </html>
