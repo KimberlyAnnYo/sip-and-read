@@ -38,3 +38,27 @@ document.querySelector("#search-input").addEventListener("keyup", function(event
         document.querySelector("#submit-button").click();
     }
 });
+
+//Punk API - start finding a random beer 
+// fetch ('https://api.punkapi.com/v2/beers/random')
+//   .then(Response => {
+// 	return Response.json()
+//   })
+//   .then(data => {
+// 	  console.log(data);
+//   const name = data[0].name
+//   console.log(name);
+//   });
+
+function getBeer() {
+	var beerApi = "https://api.punkapi.com/v2/beers/random";
+	fetch(beerApi).then(function(response){
+		return response.json();
+	})
+	.then(function(data){
+		console.log(data)
+	})
+	
+};
+
+getBeer();
