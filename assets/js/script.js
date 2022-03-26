@@ -2,7 +2,7 @@
 document.querySelector('#submit-button').addEventListener('click', searchBook);
 
 // When user inputs the search bar and clicked search button, start searching
-function searchBook(event) {
+function searchBook() {
 	let query = document.querySelector('#search-input').value;
 	// Initiate the fetch API
 	fetch(`https://www.googleapis.com/books/v1/volumes?q=${query}`)
@@ -30,7 +30,8 @@ function searchBook(event) {
 
       // Display "Search results of" text when clicked the search button
 	  document.querySelector('.text').innerHTML = `Search results of: "${query}"`
-	}
+	getBeer();
+  }
 
 // Start searching the lists when user clicks entry key
 document.querySelector("#search-input").addEventListener("keyup", function(event) {
@@ -38,3 +39,13 @@ document.querySelector("#search-input").addEventListener("keyup", function(event
         document.querySelector("#submit-button").click();
     }
 });
+
+function getBeer() {
+  console.log("getbeer");
+  fetch("URL")
+  .then((res) => res.json())
+      .then((data) => {
+console.log("beerData", data);
+      })
+      .catch((error) => console.log(error));
+}
