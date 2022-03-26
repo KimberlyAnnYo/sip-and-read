@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 
->>>>>>> a677baa35b888151370bae388c8aac907ee3aed1
 /* search box */
 
   
@@ -74,40 +71,4 @@ header {
   align-items: center;
   margin-left: 150px;
   
-<<<<<<< HEAD
-  
-  /* MEDIA QUERY FOR TABLETS AND SMALLER */
-  @media screen and (max-width: 768px) {
-    
-.testimonials {
-    flex-direction: column;
-    display: inline-block;
-    flex-wrap: wrap;
 }
-    #search-results {
-        flex-direction: column;
-    display:inline-block;
-  
-    }
-}
-  /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
-  @media screen and (max-width: 575px) {
-   
-    .testimonials {
-        flex-direction: column;
-        display: inline-block;
-        flex-wrap: wrap;
-    }
-    #search-results {
-        flex-direction: column;
-    display:inline-block;
-
-    }
-}
-
-}
-
-
-=======
-}
->>>>>>> a677baa35b888151370bae388c8aac907ee3aed1
