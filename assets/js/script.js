@@ -2,7 +2,7 @@
 document.querySelector('#submit-button').addEventListener('click', searchBook);
 
 // When user inputs the search bar and clicked search button, start searching
-function searchBook() {
+function searchBook(event) {
 	let query = document.querySelector('#search-input').value;
 	// Initiate the fetch API
 	fetch(`https://www.googleapis.com/books/v1/volumes?q=${query}`)
@@ -30,8 +30,7 @@ function searchBook() {
 
       // Display "Search results of" text when clicked the search button
 	  document.querySelector('.text').innerHTML = `Search results of: "${query}"`
-	getBeer();
-  }
+	}
 
 // Start searching the lists when user clicks entry key
 document.querySelector("#search-input").addEventListener("keyup", function(event) {
@@ -40,12 +39,27 @@ document.querySelector("#search-input").addEventListener("keyup", function(event
     }
 });
 
-function getBeer() {
-  console.log("getbeer");
-  fetch("URL")
-  .then((res) => res.json())
-      .then((data) => {
-console.log("beerData", data);
-      })
-      .catch((error) => console.log(error));
+var getBeer = function(){
+	var beerApi = "https://api.punkapi.com/v2/beers/random";
+	fetch(beerApi).then(function(response) {
+	// request was successful
+	  if (response.ok) {
+		response.json().then(function(data) {
+			console.log(data);
+			var beerName = data[0].name;
+			var beerDescription = data[0].description;
+			var beerAbv = data[0].abv
+			var beerImg = data[0].image_url
+			console.log(beerName);
+			console.log(beerDescription);
+			console.log(beerAbv);
+		});
+	  }
+	  else {
+	  //If not successful redirect back to homepage
+	  document.location.replace("./index.html");
+	  }
+});
 }
+
+getBeer();
