@@ -70,6 +70,29 @@ header {
   justify-content: space-between;
   align-items: center;
   margin-left: 150px;
+}
+
+.text {
+  margin-left: 30%;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.scroll {
+    margin:4px, 4px;
+    padding:4px;
+    
+    width: 500px;
+    height: 110px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align:justify;
+    box-sizing:content-box;
+}
+
   
   
   /* MEDIA QUERY FOR TABLETS AND SMALLER */
@@ -101,6 +124,6 @@ header {
     }
 }
 
-}
+
 
 
