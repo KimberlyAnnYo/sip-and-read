@@ -1,6 +1,6 @@
 // Event listeners for the search button
 document.querySelector('#submit-button').addEventListener('click', searchBook);
-
+document.querySelector('#submit-button').addEventListener('click', getBeer);
 // When user inputs the search bar and clicked search button, start searching
 function searchBook(event) {
 	let query = document.querySelector('#search-input').value;
@@ -30,6 +30,7 @@ function searchBook(event) {
 
       // Display "Search results of" text when clicked the search button
 	  document.querySelector('.text').innerHTML = `Search results of: "${query}"`
+	  document.querySelector('.text').innerHTML = `Search results of: "${beerApi}`
 	}
 
 // Start searching the lists when user clicks entry key
@@ -37,28 +38,31 @@ document.querySelector("#search-input").addEventListener("keyup", function(event
     if (event.keyCode === 13) {
         document.querySelector("#submit-button").click();
     }
+	let getBeer = function(){
+		let beerApi = "https://api.punkapi.com/v2/beers/random";
+		fetch(beerApi).then(function(response) {
+		// request was successful
+		  if (response.ok) {
+			response.json().then(function(data) {
+				console.log(data);
+				var beerName = data[0].name;
+				var beerDescription = data[0].description;
+				var beerAbv = data[0].abv
+				var beerImg = data[0].image_url
+				/* console.log(beerName);
+				console.log(beerDescription);
+				console.log(beerAbv); */
+			});
+		  }
+		  else {
+		  //If not successful redirect back to homepage
+		  document.location.replace("./index.html");
+		  }
+	});
+	}
+	getBeer();
 });
 
-//Punk API - start finding a random beer 
-// fetch ('https://api.punkapi.com/v2/beers/random')
-//   .then(Response => {
-// 	return Response.json()
-//   })
-//   .then(data => {
-// 	  console.log(data);
-//   const name = data[0].name
-//   console.log(name);
-//   });
 
-function getBeer() {
-	var beerApi = "https://api.punkapi.com/v2/beers/random";
-	fetch(beerApi).then(function(response){
-		return response.json();
-	})
-	.then(function(data){
-		console.log(data)
-	})
-	
-};
 
-getBeer();
+
