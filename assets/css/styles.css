@@ -1,9 +1,9 @@
-
 /* search box */
 
   
 .search {
   margin: 20px;
+  vertical-align: center;
 }
 
 .search > h3 {
@@ -70,5 +70,57 @@ header {
   justify-content: space-between;
   align-items: center;
   margin-left: 150px;
-  
 }
+
+.text {
+  margin-left: 30%;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.scroll {
+    margin:4px, 4px;
+    padding:4px;
+    
+    width: 500px;
+    height: 110px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align:justify;
+    box-sizing:content-box;
+}
+
+  
+  
+  /* MEDIA QUERY FOR TABLETS AND SMALLER */
+  @media screen and (max-width: 768px) {
+    
+.testimonials {
+    flex-direction: column;
+    display: inline-block;
+    flex-wrap: wrap;
+}
+    #search-results {
+        flex-direction: column;
+    display:inline-block;
+  
+    }
+}
+  /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+  @media screen and (max-width: 575px) {
+   
+    .testimonials {
+        flex-direction: column;
+        display: inline-block;
+        flex-wrap: wrap;
+    }
+    #search-results {
+        flex-direction: column;
+    display:inline-block;
+
+    }
+}
+
