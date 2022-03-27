@@ -1,6 +1,9 @@
 /* search box */
 
-  
+ .inputform { vertical-align: center;
+    margin: auto;
+
+ } 
 .search {
   margin: 20px;
   vertical-align: center;
