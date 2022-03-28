@@ -1,6 +1,11 @@
+
+
 /* search box */
 
-  
+body {
+  background: linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%);
+}
+
 .search {
   margin: 20px;
   vertical-align: center;
@@ -73,25 +78,30 @@ header {
 }
 
 .text {
-  margin-left: 30%;
+  margin-left: 23%;
 }
 
 main {
-  display: flex;
-  justify-content: center;
+  margin: 160px;
+  margin-bottom: 0px;
+  margin-top: 0px;
 }
 
 .scroll {
     margin:4px, 4px;
     padding:4px;
-    
-    width: 500px;
-    height: 110px;
+    width: 400px;
+    height: 550px;
     overflow-x: hidden;
     overflow-y: auto;
     text-align:justify;
     box-sizing:content-box;
 }
+
+
+
+
+
 
   
   
@@ -123,4 +133,7 @@ main {
 
     }
 }
+
+
+
 
