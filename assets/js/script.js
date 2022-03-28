@@ -57,9 +57,7 @@ function getBeer(){
 			document.querySelector("#beer-title").innerHTML=beerName;
 			document.querySelector("#beer-description").innerHTML=beerDescription;
 			document.querySelector("#beer-abv").innerHTML="Alchhol by Volume="+beerAbv;
-			function getBeerImg (){
-				
-			}
+			document.getElementById("beer-img").src = beerImg; 
 		});
 	  }
 	  else {
