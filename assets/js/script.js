@@ -63,7 +63,7 @@ fetch("https://www.thecocktaildb.com/api/json/v1/1/random.php")
 	const cocktailImg = document.createElement("img");
 	cocktailImg.src = cocktail.strDrinkThumb;
 	cocktailDiv.appendChild(cocktailImg);
-	document.body.style.backgroundImage = "url('" + cocktail.strDrinkThumb + "')";
+	/* document.body.style.backgroundImage = "url('" + cocktail.strDrinkThumb + "')"; */
 	const cocktailIngredients = document.createElement("ul");
 	cocktailDiv.appendChild(cocktailIngredients);  
 	
