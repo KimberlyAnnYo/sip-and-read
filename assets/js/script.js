@@ -39,20 +39,27 @@ document.querySelector("#search-input").addEventListener("keyup", function(event
     }
 });
 
-var getBeer = function(){
+
+document.querySelector('#submit-button').addEventListener('click', getBeer);
+
+function getBeer(){
 	var beerApi = "https://api.punkapi.com/v2/beers/random";
 	fetch(beerApi).then(function(response) {
 	// request was successful
 	  if (response.ok) {
 		response.json().then(function(data) {
-			console.log(data);
+		//Get values for each Name, desc, ABV, and Img of beers
 			var beerName = data[0].name;
 			var beerDescription = data[0].description;
 			var beerAbv = data[0].abv
 			var beerImg = data[0].image_url
-			console.log(beerName);
-			console.log(beerDescription);
-			console.log(beerAbv);
+			console.log(beerDescription)
+			document.querySelector("#beer-title").innerHTML=beerName;
+			document.querySelector("#beer-description").innerHTML=beerDescription;
+			document.querySelector("#beer-abv").innerHTML="Alchhol by Volume="+beerAbv;
+			function getBeerImg (){
+				
+			}
 		});
 	  }
 	  else {
@@ -61,5 +68,3 @@ var getBeer = function(){
 	  }
 });
 }
-
-getBeer();
