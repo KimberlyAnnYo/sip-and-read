@@ -1,3 +1,5 @@
+
+
 /* search box */
 
 body {
@@ -85,7 +87,6 @@ main {
 }
 
 .scroll {
-    border-color: 5px solid black;
     margin:4px, 4px;
     padding:4px;
     width: 400px;
@@ -97,7 +98,8 @@ main {
 }
 
 .results-box {
-  float: right;
+  float: right
+  ;
 }
 
 

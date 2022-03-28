@@ -63,3 +63,5 @@ var getBeer = function(){
 }
 
 getBeer();
+document.querySelector("#response.ok").innerHTML = response.ok;
+     
