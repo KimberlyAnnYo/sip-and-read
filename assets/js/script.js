@@ -1,5 +1,13 @@
 // Event listeners for the search button
 document.querySelector('#submit-button').addEventListener('click', searchBook);
+//search button
+
+const expand = () => {
+  searchBtn.classList.toggle("close");
+  input.classList.toggle("square");
+};
+
+searchBtn.addEventListener("click", expand);
 
 // When user inputs the search bar and clicked search button, start searching
 function searchBook(event) {

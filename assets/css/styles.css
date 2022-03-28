@@ -1,9 +1,30 @@
-/* search box */
 
+
+
+#content {
+    position: absolute;
+    height: 50px;
+    width: 300px;
+    margin-left: 170px;
+    top: -10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  h1, h2 {
+      color: black;
+  }
  .inputform { vertical-align: center;
     margin: auto;
+    color: black;
+    position: absolute;
+    height: 50px;
+    width: 300px;
+    margin: auto;
+    
 
  } 
+
+ }
 .search {
   margin: 20px;
   vertical-align: center;
