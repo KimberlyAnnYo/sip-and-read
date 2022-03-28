@@ -1,6 +1,9 @@
 /* search box */
 
-  
+body {
+  background: linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%);
+}
+
 .search {
   margin: 20px;
   vertical-align: center;
@@ -82,16 +85,24 @@ main {
 }
 
 .scroll {
+    border-color: 5px solid black;
     margin:4px, 4px;
     padding:4px;
-    
-    width: 500px;
-    height: 110px;
+    width: 400px;
+    height: 300px;
     overflow-x: hidden;
     overflow-y: auto;
     text-align:justify;
     box-sizing:content-box;
 }
+
+.results-box {
+  float: right;
+}
+
+
+
+
 
   
   
