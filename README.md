@@ -5,5 +5,11 @@
 
 ![alt-text](./assets/images/Screenshot.png)
 
+## Live link:
+https://kimberlyannyo.github.io/sip-and-read/
+
+## Repo:
+https://github.com/KimberlyAnnYo/sip-and-read
+
 ### 
 Contributions by Matthew Songer, Nathanial Shattuck, Kimberly West, Matthew Boisse 
