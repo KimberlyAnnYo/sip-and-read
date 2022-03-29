@@ -30,7 +30,7 @@ body {
 
 .search > div:after {
   content: "";
-  background: black;
+  background: #000000;
   width: 4px;
   height: 10px;
   position: absolute;
@@ -65,6 +65,11 @@ body {
 .search > div > input:focus,
 .search > div > input:not(:placeholder-shown) {
   width: 250px;
+}
+
+#submit-button {
+  display: none;
+  visibility: hidden;
 }
 /* header  */ 
 header {
