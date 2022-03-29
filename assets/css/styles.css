@@ -1,30 +1,8 @@
 
+body {
+  background: linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%);
+}
 
-
-#content {
-    position: absolute;
-    height: 50px;
-    width: 300px;
-    margin-left: 170px;
-    top: -10%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  h1, h2 {
-      color: black;
-  }
- .inputform { vertical-align: center;
-    margin: auto;
-    color: black;
-    position: absolute;
-    height: 50px;
-    width: 300px;
-    margin: auto;
-    
-
- } 
-
- }
 .search {
   margin: 20px;
   vertical-align: center;
@@ -106,16 +84,24 @@ main {
 }
 
 .scroll {
+    border-color: 5px solid black;
     margin:4px, 4px;
     padding:4px;
-    
-    width: 500px;
-    height: 110px;
+    width: 400px;
+    height: 300px;
     overflow-x: hidden;
     overflow-y: auto;
     text-align:justify;
     box-sizing:content-box;
 }
+
+.results-box {
+  float: right;
+}
+
+
+
+
 
   
   
