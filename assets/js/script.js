@@ -94,6 +94,7 @@ fetch("https://www.thecocktaildb.com/api/json/v1/1/random.php")
   */
 
 document.querySelector("#submit-button").addEventListener("click", getBeer);
+document.querySelector("#submit").addEventListener("click", getBeer);
 
 function getBeer() {
   var beerApi = "https://api.punkapi.com/v2/beers/random";
