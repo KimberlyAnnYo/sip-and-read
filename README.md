@@ -3,7 +3,7 @@
 
 ## Built with Javascript, HTML, CSS, Tailwind!
 
-![alt-text](assets/images/screenshot)
+![alt-text](./assets/images/Screenshot.png)
 
 ### 
 Contributions by Matthew Songer, Nathanial Shattuck, Kimberly West, Matthew Boisse 
