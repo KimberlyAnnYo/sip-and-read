@@ -1,4 +1,7 @@
 
+
+/* search box */
+
 body {
   background: linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%);
 }
@@ -75,29 +78,26 @@ header {
 }
 
 .text {
-  margin-left: 30%;
+  margin-left: 23%;
 }
 
 main {
-  display: flex;
-  justify-content: center;
+  margin: 160px;
+  margin-bottom: 0px;
+  margin-top: 0px;
 }
 
 .scroll {
-    border-color: 5px solid black;
     margin:4px, 4px;
     padding:4px;
     width: 400px;
-    height: 300px;
+    height: 550px;
     overflow-x: hidden;
     overflow-y: auto;
     text-align:justify;
     box-sizing:content-box;
 }
 
-.results-box {
-  float: right;
-}
 
 
 

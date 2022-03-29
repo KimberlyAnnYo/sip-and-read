@@ -11,39 +11,57 @@
     <script src="https://kit.fontawesome.com/54e1f4c1b6.js" crossorigin="anonymous"></script>
      <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body class="bg-slate-400">
+<body class="">
+  
   <header>
-    <div id="submit-button">
-      <input type="text" name="search" placeholder="Search..." class="search-input">
-      <a href="#" class="search-btn">
-              <i class="fas fa-search"></i>      
-      </a>
-  </div>
-  </header>
+    <div class="search">
+      <div class="container">
+        <div class="container">
+          <h1>Books</h1>
+          <h2>Find the Book You Want to Read Next</h2>
+          <div class="inputform">
+            <input
+              type="text"
+              id="search-input"
+              name="search-input"
+              placeholder=" Search for books here"
+            /><input
+              type="submit"
+              id="submit-button"
+              name="submit-button"
+              value="Search"
+            />
+          </div>
+      </div>   
+    </div>
 
-  <div class="text flex flex-wrap p-2 grid gap-2 grid-cols-1"></div>
-<main class="flex flex-wrap grid-cols-2 gap-10 ml-56 place-items-center">
+
+    
+
+</header>
+
+<div class="text flex flex-wrap p-2 grid gap-2 grid-cols-1"></div>
+<main class="flex flex-wrap grid grid-cols-2 place-items-center ">
   
   <!--Card 1-->
-    <div class="scroll bg-white bg-opacity-50  flex flex-wrap  p-2 grid gap-2 grid-col-2" id="output"></div>
+    <div class="scroll bg-white bg-opacity-50 border-white border-8 shadow-2xl rounded-xl flex flex-wrap p-2 grid grid-cols-1 " id="output"></div>
   <!--Card 2-->
-  <div class="flex flex-wrap p-2 grid gap-2 grid-cols-2 ">
-    <div class="flex flex-col md:flex-row md:max-w-xl rounded-lg bg-white shadow-lg">
-      <img class=" w-full h-96 md:h-auto object-cover md:w-48 rounded-t-lg md:rounded-none md:rounded-l-lg" src="./assets/images/beer.jpeg" alt="" />
+  <div class="scroll bg-white bg-opacity-50 border-white border-8  rounded-xl flex flex-wrap p-2" id="">
+    <div class="flex flex-col md:flex-row md:max-w-xl rounded-lg  ">
+      <img id="beer-img" class=" w-full h-96 md:h-auto object-cover md:w-48 rounded-t-lg md:rounded-none md:rounded-l-lg" alt="" />
       <div class="p-6 flex flex-col justify-start">
-        <h5 class="text-gray-900 text-xl font-medium mb-2">Beer</h5>
-        <p id="beer-form" class="text-gray-700 text-base mb-4">
-          <!--This is where Information for Beer will go-->
-        </p>
+        <h5 id="beer-title" class="text-gray-900 text-xl font-medium mb-2"><!--Name of Beer will go here--></h5>
+        <ul class="text-gray-700 text-base mb-4">
+          <li id="beer-description" class="text-gray-700 text-base mb-4"> </li>
+          <li id="beer-abv" class="text-gray-700 text-base mb-4"> </li>
+        </ul>
          </div>
     </div>
   </div>
 </main> 
 
-  <!-- Display the search results -->
-  <h2 class="text"></h2>
-  <div id="output"></div>
-</div>
+
+
 
 <script src="assets/js/script.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

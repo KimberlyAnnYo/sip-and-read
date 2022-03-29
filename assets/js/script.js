@@ -37,7 +37,7 @@ function searchBook(event) {
       .catch((error) => console.log(error));
 
       // Display "Search results of" text when clicked the search button
-	  document.querySelector('.text').innerHTML = `Scroll to see results for: "${query}"`
+	  document.querySelector('.text').innerHTML = `Search results for: "${query}"`
 	}
 
 // Start searching the lists when user clicks entry key
@@ -47,20 +47,74 @@ document.querySelector("#search-input").addEventListener("keyup", function(event
     }
 });
 
-var getBeer = function(){
+
+/*
+fetch("https://www.thecocktaildb.com/api/json/v1/1/random.php")
+  .then((response) => {
+    if (response.ok) {
+      return response.json();
+    } else {
+      throw new Error("NETWORK RESPONSE ERROR");
+    }
+  })
+  .then(data => {
+    console.log(data);
+    displayCocktail(data)
+  })
+  .catch((error) => console.error("FETCH ERROR:", error));
+
+  function displayCocktail(data) {
+	const cocktail = data.drinks[0];
+	const cocktailDiv = document.getElementById("cocktail");
+	const cocktailName = cocktail.strDrink;
+	const heading = document.createElement("h1");
+	heading.innerHTML = cocktailName;
+	cocktailDiv.appendChild(heading);
+	const cocktailImg = document.createElement("img");
+	cocktailImg.src = cocktail.strDrinkThumb;
+	cocktailDiv.appendChild(cocktailImg);
+	/* document.body.style.backgroundImage = "url('" + cocktail.strDrinkThumb + "')";
+	const cocktailIngredients = document.createElement("ul");
+	cocktailDiv.appendChild(cocktailIngredients);  
+	
+	const getIngredients = Object.keys(cocktail)
+	  .filter(function (ingredient) {
+		return ingredient.indexOf("strIngredient") == 0;
+	  })
+	  .reduce(function (ingredients, ingredient) {
+		if (cocktail[ingredient] != null) {
+		  ingredients[ingredient] = cocktail[ingredient];
+		}
+		return ingredients;
+	  }, {});
+  
+	for (let key in getIngredients) {
+	  let value = getIngredients[key];
+	  listItem = document.createElement("li");
+	  listItem.innerHTML = value;
+	  cocktailIngredients.appendChild(listItem);
+	}
+  }   
+  */
+
+  document.querySelector('#submit-button').addEventListener('click', getBeer);
+
+function getBeer(){
 	var beerApi = "https://api.punkapi.com/v2/beers/random";
 	fetch(beerApi).then(function(response) {
 	// request was successful
 	  if (response.ok) {
 		response.json().then(function(data) {
-			console.log(data);
+		//Get values for each Name, desc, ABV, and Img of beers
 			var beerName = data[0].name;
 			var beerDescription = data[0].description;
 			var beerAbv = data[0].abv
 			var beerImg = data[0].image_url
-			console.log(beerName);
-			console.log(beerDescription);
-			console.log(beerAbv);
+			console.log(beerDescription)
+			document.querySelector("#beer-title").innerHTML=beerName;
+			document.querySelector("#beer-description").innerHTML=beerDescription;
+			document.querySelector("#beer-abv").innerHTML="Alchhol by Volume="+beerAbv;
+			document.getElementById("beer-img").src = beerImg; 
 		});
 	  }
 	  else {
@@ -69,5 +123,3 @@ var getBeer = function(){
 	  }
 });
 }
-
-getBeer();
