@@ -1,5 +1,6 @@
 // Event listeners for the search button
 document.querySelector("#submit-button").addEventListener("click", searchBook);
+document.querySelector("#submit").addEventListener("click", searchBook);
 
 // When user inputs the search bar and clicked search button, start searching
 function searchBook(event) {
