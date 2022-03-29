@@ -5,6 +5,14 @@ body {
   background: linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%);
 }
 
+hr {
+  
+  border: 5px solid rgb(0, 0, 0);
+  
+}
+li {
+  padding: 5px;
+}
 .search {
   margin: 20px;
   vertical-align: center;
