@@ -1,12 +1,14 @@
-<<<<<<< HEAD
-=======
 
->>>>>>> a677baa35b888151370bae388c8aac907ee3aed1
+
 /* search box */
 
-  
+body {
+  background: linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%);
+}
+
 .search {
   margin: 20px;
+  vertical-align: center;
 }
 
 .search > h3 {
@@ -73,8 +75,35 @@ header {
   justify-content: space-between;
   align-items: center;
   margin-left: 150px;
+}
+
+.text {
+  margin-left: 23%;
+}
+
+main {
+  margin: 160px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.scroll {
+    margin:4px, 4px;
+    padding:4px;
+    width: 400px;
+    height: 550px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align:justify;
+    box-sizing:content-box;
+}
+
+
+
+
+
+
   
-<<<<<<< HEAD
   
   /* MEDIA QUERY FOR TABLETS AND SMALLER */
   @media screen and (max-width: 768px) {
@@ -105,9 +134,6 @@ header {
     }
 }
 
-}
 
 
-=======
-}
->>>>>>> a677baa35b888151370bae388c8aac907ee3aed1
+
