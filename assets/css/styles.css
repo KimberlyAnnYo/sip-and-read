@@ -14,7 +14,12 @@ body {
   font-weight: normal;
 }
 
-.search > h1,
+.search > h1{
+  color: black;
+  font-size: large;
+  text-align: center;
+  vertical-align: center;
+}
 .search > h3 {
   color: black;
   margin-bottom: 15px;
