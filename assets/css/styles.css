@@ -66,6 +66,12 @@ body {
 .search > div > input:not(:placeholder-shown) {
   width: 250px;
 }
+
+#submit-button {
+  display: none;
+  visibility: hidden;
+}
+
 /* header  */ 
 header {
   min-height:100px;
