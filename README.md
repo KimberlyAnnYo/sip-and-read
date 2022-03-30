@@ -2,9 +2,10 @@
 ## An awesome search page to find your favorite book while a random beer recommendation generates on the page. 
 
 ## Built With:
-- Javascript 
 - HTML
 - CSS
+- Javascript 
+- jQuery
 - Tailwind
 
 ![alt-text](./assets/images/Screenshot.png)
