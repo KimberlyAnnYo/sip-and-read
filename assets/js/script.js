@@ -2,6 +2,18 @@
 document.querySelector("#submit-button").addEventListener("click", searchBook);
 document.querySelector("#submit").addEventListener("click", searchBook);
 
+//Place saved Local storage item into search bar
+var storedItem = localStorage.getItem('search-input');
+console.log(storedItem);
+function storedBook(){
+  document.getElementById("search-input").value = storedItem;
+  searchBook();
+  getBeer();
+};
+
+storedBook();
+
+
 // When user inputs the search bar and clicked search button, start searching
 function searchBook(event) {
   let query = document.querySelector("#search-input").value;
@@ -34,6 +46,8 @@ function searchBook(event) {
 
   // Display "Search results of" text when clicked the search button
   document.querySelector(".text").innerHTML = `Search results for: "${query}"`;
+  //Save the search within Local Storage
+  localStorage.setItem("search-input", query);
 }
 
 // Start searching the lists when user clicks entry key
@@ -44,6 +58,15 @@ document
       document.querySelector("#submit-button").click();
     }
   });
+
+//Save to Local Storage
+// document.querySelector("#submit-button").addEventListener("click", saveLocal);
+// document.querySelector("#submit").addEventListener("click", saveLocal);
+// function saveLocal(){
+//   console.log();
+// }
+
+
 
 /*
 fetch("https://www.thecocktaildb.com/api/json/v1/1/random.php")
@@ -107,7 +130,7 @@ function getBeer() {
         var beerDescription = data[0].description;
         var beerAbv = data[0].abv;
         var beerImg = data[0].image_url;
-        console.log(beerDescription);
+        console.log();
         document.querySelector("#beer-title").innerHTML = beerName;
         document.querySelector("#beer-description").innerHTML = beerDescription;
         document.querySelector("#beer-abv").innerHTML =
