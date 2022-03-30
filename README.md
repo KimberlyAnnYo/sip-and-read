@@ -1,5 +1,5 @@
 # Sip and Read
-## An awesome search page to find your favorite book while a random beer recommendation generates on the page. 
+An awesome search page to find your favorite book while a random beer recommendation generates on the page. 
 
 ## Built With:
 - HTML
