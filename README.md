@@ -5,7 +5,6 @@ An awesome search page to find your next book while a random beer recommendation
 - HTML
 - CSS
 - Javascript 
-- jQuery
 - Tailwind
 
 ![alt-text](./assets/images/Screenshot.png)
