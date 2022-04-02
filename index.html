@@ -1,26 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Releases of Books</title>
+    <title>Books and Beer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto:wght@300&display=swap"
+    rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/54e1f4c1b6.js" crossorigin="anonymous"></script>
+     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body>
-  <header>
-    <h1>Book Releases by Date</h1>
-  </header>
-
-  <main>
-
-    <form>
-      <label></label>
-      <input name="Search box">
-      <button type="submit">Find Books</button>
-    </form>
-
-  </main>
+<body class="">
   
+  <header>
+    <div class="search">
+      
+        
+          <h1><strong>A good book in one hand deserves a great beer in the other!</strong></h1>
+          <h2> Find your next book and beer</h2>
+          <div class="inputform">
+            <input
+              type="text"
+              id="search-input"
+              name="search-input"
+              placeholder=" Search for books here"
+              /><input
+              type="submit"
+              id="submit-button"
+              name="submit-button"
+              value="Search"
+              />
+              
+              
+            </div>
+            <button type="submit" id="submit">search</button>
+
+
+    
+
+</header>
+
+<div class="text flex flex-wrap p-2 grid gap-2 grid-cols-1"></div>
+<main class="flex flex-wrap grid grid-cols-2 place-items-center ">
+  
+  <!--Card 1-->
+    <div class="scroll bg-white bg-opacity-50 border-white border-8 shadow-2xl rounded-xl flex flex-wrap p-2 grid grid-cols-1 " id="output"></div>
+  <!--Card 2-->
+  <div class="scroll bg-white bg-opacity-50 border-white border-8  rounded-xl flex flex-wrap p-2" id="">
+    <div class="flex flex-col md:flex-row md:max-w-xl rounded-lg  ">
+      <img id="beer-img" class=" w-full h-96 md:h-auto object-cover md:w-48 rounded-t-lg md:rounded-none md:rounded-l-lg" alt="" />
+      <div class="p-6 flex flex-col justify-start">
+        <h5 id="beer-title" class="text-gray-900 text-xl font-medium mb-2"><!--Name of Beer will go here--></h5>
+        <ul class="text-gray-700 text-base mb-4">
+          <li id="beer-description" class="text-gray-700 text-base mb-4"> </li>
+          <li id="beer-abv" class="text-gray-700 text-base mb-4"> </li>
+        </ul>
+         </div>
+    </div>
+  </div>
+</main> 
+
+
+
+
+<script src="./assets/js/script.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 </body>
 
 </html>

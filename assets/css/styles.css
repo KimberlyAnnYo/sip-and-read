@@ -1,0 +1,154 @@
+
+
+/* search box */
+
+body {
+  background: linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%);
+}
+
+hr {
+  
+  border: 5px solid rgb(0, 0, 0);
+  
+}
+li {
+  padding: 5px;
+}
+.search {
+  margin: 20px;
+  vertical-align: center;
+}
+
+.search > h3 {
+  font-weight: normal;
+}
+
+.search > h1{
+  color: black;
+  font-size: x-large;
+  text-align: center;
+  vertical-align: center;
+}
+.search > h3 {
+  color: black;
+  margin-bottom: 15px;
+  text-shadow: 0 1px white;
+}
+
+.search > div {
+  display: inline-block;
+  position: relative;
+  filter: drop-shadow(0 1px white);
+}
+
+.search > div:after {
+  content: "";
+  background: black;
+  width: 4px;
+  height: 10px;
+  position: absolute;
+  top: 23px;
+  right: -2px;
+  transform: rotate(135deg);
+} 
+
+.search > div > input {
+  color: black;
+  font-size: 16px;
+  background: transparent;
+  width: 25px;
+  height: 25px;
+  padding: 10px;
+  border: solid 3px black;
+  outline: none;
+  border-radius: 35px;
+  transition: width 0.5s;
+}
+
+.search > div > input::placeholder {
+  color: black;
+  opacity: 0;
+  transition: opacity 150ms ease-out;
+}
+
+.search > div > input:focus::placeholder {
+  opacity: 1;
+}
+
+.search > div > input:focus,
+.search > div > input:not(:placeholder-shown) {
+  width: 250px;
+}
+
+#submit-button {
+  display: none;
+  visibility: hidden;
+}
+
+/* header  */ 
+header {
+  min-height:100px;
+  display: flex;
+  padding-top: 20px;
+  padding-left: 60px;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 150px;
+}
+
+.text {
+  margin-left: 23%;
+}
+
+main {
+  margin: 160px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.scroll {
+    margin:4px, 4px;
+    padding:4px;
+    width: 400px;
+    height: 550px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align:justify;
+    box-sizing:content-box;
+}
+
+
+
+
+
+
+  
+  
+  /* MEDIA QUERY FOR TABLETS AND SMALLER */
+  @media screen and (max-width: 768px) {
+    
+.testimonials {
+    flex-direction: column;
+    display: inline-block;
+    flex-wrap: wrap;
+}
+    #search-results {
+        flex-direction: column;
+    display:inline-block;
+  
+    }
+}
+  /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+  @media screen and (max-width: 575px) {
+   
+    .testimonials {
+        flex-direction: column;
+        display: inline-block;
+        flex-wrap: wrap;
+    }
+    #search-results {
+        flex-direction: column;
+    display:inline-block;
+
+    }
+}
